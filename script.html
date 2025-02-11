@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz San Valentin</title>
+    <title>Cartas del Destino</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         /* General */
@@ -14,10 +14,9 @@
             padding: 20px;
             margin: 0;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
             min-height: 100vh;
             animation: changeBackground 10s infinite alternate;
-            overflow-y: auto;
         }
 
         /* Animación para el título */
@@ -98,7 +97,7 @@
         .card {
             width: 100%;
             height: 250px;
-            /**/
+            /* Altura aumentada */
             background-color: #3c3c3c;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -221,7 +220,7 @@
             margin: 10% auto;
             padding: 20px;
             width: 90%;
-            max-width: 400px;
+            max-width: 500px;
             border-radius: 15px;
             text-align: center;
             animation: modalAppear 0.5s ease;
@@ -298,38 +297,38 @@
 
 <body>
     <div class="container">
-        <h1 class="title">Xochitl! 💖</h1>
+        <h1 class="title">¡Las Cartas del Destino, Michelle! 💖</h1>
         <p class="subtitle">Cada carta guarda un mensaje especial para ti</p>
         <div class="cards">
             <div class="card" id="card1">
-                <div class="front">
-                    <img src="assets/image1.webp" alt="En el Tsuru" height="100%">
+                <div class="front">🎴</div>
+                <div class="back">
+                    <img src="assets/image1.webp" alt="Imagen 1">
                 </div>
-                <div class="back"></div>
             </div>
             <div class="card" id="card2">
-                <div class="front">
-                    <img src="assets/image2-2.png" alt="Frente al espejo" height="100%">
+                <div class="front">🎴</div>
+                <div class="back">
+                    <img src="assets/image1.webp" alt="Imagen 2">
                 </div>
-                <div class="back"></div>
             </div>
             <div class="card" id="card3">
-                <div class="front">
-                    <img src="assets/image4-2.webp" alt="Rosas" height="100%">
+                <div class="front">🎴</div>
+                <div class="back">
+                    <img src="assets/image1.webp" alt="Imagen 3">
                 </div>
-                <div class="back"></div>
             </div>
             <div class="card" id="card4">
-                <div class="front">
-                    <img src="assets/image3-2.PNG" alt="Gym" height="100%">
+                <div class="front">🎴</div>
+                <div class="back">
+                    <img src="assets/image1.webp" alt="Imagen 4">
                 </div>
-                <div class="back"></div>
             </div>
             <div class="card" id="card5">
-                <div class="front">
-                    <img src="assets/image5-2.png" alt="Gym negro" height="100%">
+                <div class="front">🎴</div>
+                <div class="back">
+                    <img src="assets/image1.webp" alt="Imagen 5">
                 </div>
-                <div class="back"></div>
             </div>
         </div>
     </div>
@@ -339,7 +338,7 @@
     <div id="valentin-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Feliz Primer San Valentín Juntos Guapa 💟💌💘</h2>
+            <h2>¡Michelle, quieres ser mi San Valentín? 💌</h2>
             <div class="hearts-container"></div>
         </div>
     </div>
@@ -351,11 +350,11 @@
 
             // Mensajes para las cartas
             const messages = [
-                "Hola guapa",
                 "Eres la razón de mi felicidad 💖",
-                "Te quiero mucho",
-                "Gracias por tantos momentos tan lindos",
-                "Eres la mejor novia del mundo"
+                "Cada día contigo es un regalo 🎁",
+                "Tu sonrisa ilumina mi vida ✨",
+                "El amor que siento por ti es infinito 💫",
+                "Y finalmente... ¿Quieres ser mi San Valentín? 💌"
             ];
 
             // Asignar eventos a cada carta
@@ -364,7 +363,7 @@
                     if (card.classList.contains('flip')) return;
 
                     const back = card.querySelector('.back');
-                    back.textContent = messages[index];
+                    back.innerHTML = `<p>${messages[index]}</p>`; // Agregar mensaje
                     card.classList.add('flip');
 
                     // Check if all cards are flipped
@@ -416,7 +415,7 @@
 
             document.querySelector('.close').addEventListener('click', () => {
                 document.getElementById('valentin-modal').style.display = 'none';
-                window.open("https://www.youtube.com/watch?v=RNELkqU9m-g&t=2s", "_blank");
+                window.open("https://www.youtube.com/watch?v=oWBYhV0X_vI&t=10s", "_blank");
             });
         });
     </script>
